@@ -28,7 +28,7 @@ Courses Page:
 Video Page:
 ![video-tab](src/assets/video-tab.png)
 
-## Live Demo
+## <a href="https://youtube.pavanaditya.com" target="_">here</a>
 
 You can file the live demo of the app in the above link and also <a href="https://youtube.pavanaditya.com" target="_">here</a>.
 
