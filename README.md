@@ -20,13 +20,13 @@ Home Page:
 ![home-tab](src/assets/home-tab.png)
 
 Home Page Loading:
-![home-tab-load](assets/home-tab-load.png)
+![home-tab-load](src/assets/home-tab-load.png)
 
 Courses Page:
-![courses-tab](assets/courses-tab.png)
+![courses-tab](src/assets/courses-tab.png)
 
 Video Page:
-![video-tab](assets/video-tab.png)
+![video-tab](src/assets/video-tab.png)
 
 ## Live Demo
 
