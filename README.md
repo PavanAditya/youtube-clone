@@ -26,10 +26,6 @@ Courses Page:
 Video Page:
 ![video-tab](src/assets/video-tab.png)
 
-## Developer
+## Developer : <a href="https://pavanaditya.com" target="_">Pavan Aditya M S</a>
 
-Pavan Aditya M S <a href="https://pavanaditya.com" target="_">pavanaditya.com</a>
-
-## Further help
-
-To get more help on the above app you can contact me at pavanaditya.ms@gmail.com
+## Further help : pavanaditya.ms@gmail.com
