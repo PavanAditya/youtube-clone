@@ -17,7 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## App Images
 
 Home Page:
-![home-tab](assets/home-tab.png)
+![home-tab](src/assets/home-tab.png)
 
 Home Page Loading:
 ![home-tab-load](assets/home-tab-load.png)
