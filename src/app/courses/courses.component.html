@@ -1,0 +1,79 @@
+<section class="gallery">
+  <div class="row vid-list" *ngIf="!youtubeCoursesList">
+    <div class="col-md-3" *ngFor="let item of [].constructor(10); index as i;">
+      <section class="card">
+        <figure class="card-image loading"></figure>
+        <div class="card-detail">
+          <h3 class="card-title loading"></h3>
+          <p class="card-description loading"></p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row vid-list" *ngIf="youtubeCoursesList">
+    <div class="col-md-3" *ngFor="let video of youtubeCoursesList; index as i;">
+      <section class="card" (click)="navigateToCourse(i)">
+        <figure class="card-image">
+          <span class="course-icon" align="center">
+            10 Videos <br> <span class="course-sym">((▷))</span>
+          </span>
+          <span class="play-icon">
+            ▷ Play all
+          </span>
+          <img src="{{video.snippet.thumbnails.high.url}}" />
+        </figure>
+        <div class="card-detail">
+          <div class="card-title row">
+            <div class="col-md-12">
+              {{ video.snippet.title.length > 40 ? video.snippet.title.slice(0, 40) + '...' : video.snippet.title }}
+            </div>
+            <!-- <span class="col-md-5 channel-name" align="center">
+              {{ (video.snippet.channelTitle.length > 10 ? video.snippet.channelTitle.slice(0, 10) + '...' : video.snippet.channelTitle) + ' ✅ ' }}
+            </span> -->
+          </div>
+          <div
+            (click)="openYoutubeChannel('https://www.youtube.com/channel/' + video.snippet.channelId);$event.stopPropagation()">
+            <p class="card-description" align="center">
+              <span class="col-md-12 channel-name">
+                {{ (video.snippet.channelTitle.length > 20 ? video.snippet.channelTitle.slice(0, 20) + '...' : video.snippet.channelTitle) + ' ✅ ' }}
+              </span>
+              <!-- {{ video.snippet.description }} -->
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3" *ngFor="let video of youtubeCoursesList.reverse(); index as i;">
+      <section class="card" (click)="navigateToCourse(i)">
+        <figure class="card-image">
+          <span class="course-icon" align="center">
+            10 Videos <br> <span class="course-sym">((▷))</span>
+          </span>
+          <span class="play-icon">
+            ▷ Play all
+          </span>
+          <img src="{{video.snippet.thumbnails.high.url}}" />
+        </figure>
+        <div class="card-detail">
+          <div class="card-title row">
+            <div class="col-md-12">
+              {{ video.snippet.title.length > 40 ? video.snippet.title.slice(0, 40) + '...' : video.snippet.title }}
+            </div>
+            <!-- <span class="col-md-5 channel-name" align="center">
+              {{ (video.snippet.channelTitle.length > 10 ? video.snippet.channelTitle.slice(0, 10) + '...' : video.snippet.channelTitle) + ' ✅ ' }}
+            </span> -->
+          </div>
+          <div
+            (click)="openYoutubeChannel('https://www.youtube.com/channel/' + video.snippet.channelId);$event.stopPropagation()">
+            <p class="card-description" align="center">
+              <span class="col-md-12 channel-name">
+                {{ (video.snippet.channelTitle.length > 20 ? video.snippet.channelTitle.slice(0, 20) + '...' : video.snippet.channelTitle) + ' ✅ ' }}
+              </span>
+              <!-- {{ video.snippet.description }} -->
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

@@ -1,27 +1,41 @@
-# Lms
+# Youtube Clone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
 
+Run `npm i` for installing the required package files as per package.json.
+
+## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## App Images
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Home Page:
+![home-tab](assets/home-tab.png)
 
-## Running end-to-end tests
+Home Page Loading:
+![home-tab-load](assets/home-tab-load.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Courses Page:
+![courses-tab](assets/courses-tab.png)
+
+Video Page:
+![video-tab](assets/video-tab.png)
+
+## Live Demo
+
+You can file the live demo of the app in the above link and also <a href="https://youtube.pavanaditya.com" target="_">here</a>.
+
+## Developer
+
+Pavan Aditya M S <a href="https://pavanaditya.com" target="_">pavanaditya.com</a>
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on the above app you can contact me at pavanaditya.ms@gmail.com

@@ -1,0 +1,45 @@
+<div class="main-tab" *ngIf="videoData">
+  <button (click)="navigateToHome()" align="right">home</button>
+  <div class="row video-add-ons">
+    <div class="video-desc col-md-8" [style.minHeight.px]="innerWidth > 700 ? innerHeight-150 : innerHeight">
+      <!-- <iframe id="player" class="youtube-video" [src]="'https://www.youtube.com/embed/' + videoId + '?enablejsapi=1' | safe" frameborder="0"
+        allow="accelerometer; encrypted-media; gyroscope" allowfullscreen align="center"></iframe> -->
+      <div class="youtube-video" id="youtube-player"></div>
+      <div class="vid-title">
+        <h4>{{ videoData?.items[0].snippet.title }}</h4>
+        <div class="row chn-desc">
+          <div class="col-md-6 channel-name">
+            <span
+              (click)="openYoutubeChannel('https://www.youtube.com/channel/' + videoData.items[0].snippet.channelId)">{{ videoData?.items[0].snippet.channelTitle.substring(0, 30) }}</span>
+          </div>
+          <div class="col-md-6" align="right">{{ 'Course Name' }}</div>
+        </div>
+      </div>
+      <p [className]="!toggleViewMore ? 'vid-tab-desc-snippet' : 'vid-tab-desc-snippet no-scroll'">{{ videoData?.items[0].snippet.description | viewMore: toggleViewMore }}
+      </p>
+      <div class="view-more" align="right" (click)="viewMoreDesc()">{{ toggleViewMore ? 'View more' : 'View less' }}</div>
+    </div>
+    <div class="video-recomms col-md-4">
+      <div *ngIf="!recommVideos">
+        <div class="vid-tab row vid-tab-loading" *ngFor="let video of [].constructor(10)">
+          <div class="col-md-5 vid-tab-img loading"></div>
+          <div class="col-md-7 vid-tab-desc-loading">
+            <div class="vid-tab-title loading"></div>
+            <div class="vid-tab-channel loading"></div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="recommVideos">
+        <div (click)="navigateToVideo(video.items[0].id)" class="vid-tab row" *ngFor="let video of recommVideos">
+          <div class="col-md-5 vid-tab-img">
+            <img src="{{ video.items[0].snippet.thumbnails.high.url }}" alt="video image">
+          </div>
+          <div class="col-md-7 vid-tab-desc">
+            <p class="vid-tab-title">{{ video.items[0].snippet.title.substring(0, 50) }}</p>
+            <p class="vid-tab-channel">{{ video.items[0].snippet.channelTitle.substring(0, 30) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

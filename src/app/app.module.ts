@@ -3,14 +3,30 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { VideosComponent } from './videos/videos.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CourseListComponent } from './course-list/course-list.component';
+import { LmsHomeComponent } from './lms-home/lms-home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SafePipe } from './pipes/safe.pipe';
+import { ViewMorePipe } from './pipes/view-more.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VideosComponent,
+    VideoPlayerComponent,
+    CoursesComponent,
+    CourseListComponent,
+    LmsHomeComponent,
+    SafePipe,
+    ViewMorePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
