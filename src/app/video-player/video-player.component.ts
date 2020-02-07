@@ -55,16 +55,16 @@ export class VideoPlayerComponent implements OnInit {
   }
 
   public getVideoData(id: string): void {
-    // this.videoData = avplVideo[1];
+    this.videoData = avplVideo[1];
     setTimeout(() => {
       this.recommVideos = [avplVideo[0], avplVideo[2], avplVideo[4], avplVideo[1],
       avplVideo[3], avplVideo[2], avplVideo[4], avplVideo[1], avplVideo[0], avplVideo[3]];
       console.log(this.recommVideos);
     }, 2000);
-    this.videosService.getVideoData(id).subscribe(resp => {
-      this.videoData = resp;
-      this.initVideo();
-    });
+    // this.videosService.getVideoData(id).subscribe(resp => {
+    //   this.videoData = resp;
+    //   this.initVideo();
+    // });
   }
 
   public viewMoreDesc(): void {
